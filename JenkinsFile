@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build TADS') {
+            steps {
+                script {
+                    sh '''
+                    java --version
+                    docker version
+                    docker-compose version
+                    '''
+                }
+            }
+        }
+    }
+}
